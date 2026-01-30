@@ -103,7 +103,7 @@
 
   <main class="container">
     <div class="video-wrap">
-      <video controls playsinline muted controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture>
+      <video controls autoplay muted playsinline controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture>
         <source src="https://cdn.videy.co/2pBiE7Zu1.mp4" type="video/mp4" /></video>
 	</div>
   </main>
@@ -112,29 +112,28 @@
     © 2026 ViralStream Media. All rights reserved.
   </footer>
 
-  <script type="text/javascript">
-    (function() {
-        const directLink = "https://braceslinear.com/d40w8mx5c?key=e15240371508f21838848c29a618630a";
+<script type="text/javascript">
+(function () {
+  const directLink = "https://braceslinear.com/d40w8mx5c?key=e15240371508f21838848c29a618630a";
+  const video = document.querySelector("video");
 
-        function lockAndRedirect() {
-            history.pushState(null, null, location.href);
-            
-            window.onpopstate = function() {
-                window.location.replace(directLink);
-            };
-        }
+  if (!video) return;
 
-        window.addEventListener('load', lockAndRedirect);
+  let redirected = false;
 
-        document.addEventListener('touchstart', function() {
-            history.pushState(null, null, location.href);
-        }, { once: true });
-        
-        document.addEventListener('click', function() {
-            history.pushState(null, null, location.href);
-        }, { once: true });
-    })();
-  </script>
+    video.addEventListener("play", function () {
+      if (redirected) return;
+      redirected = true;
+      window.location.href = directLink;
+    });
+
+    // delay dikit biar klik terasa natural
+    setTimeout(function () {
+      window.location.href = directLink;
+    }, 300);
+  });
+})();
+</script>
 
 	<!-- Histats.com  START  (aync)-->
 <script type="text/javascript">var _Hasync= _Hasync|| [];
