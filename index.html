@@ -1,9 +1,10 @@
 
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title> XXXXXXXXXX </title>
+  <title> XXXXX </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
   <style>
@@ -33,11 +34,10 @@
       background:linear-gradient(to bottom,#18181b,#09090b);
       text-align:center;
       padding: 18px 12px 14px 12px;
-      font-size: 1.35rem;
+      font-size:1.15rem;
       font-weight:600;
       letter-spacing:1px;
       border-bottom:1px solid var(--border-color);
-      color: var(--text-main);
       position:sticky;
       top:0;
       z-index:10;
@@ -56,16 +56,16 @@
       margin:0 auto;
     }
 
-    video{
-      width:80%;
+    video {
+      width: 80%;
       object-fit: contain;
-      border-radius:12px;
-      background:#18181e;
-      box-shadow:0 4px 20px rgba(0,0,0,.5);
-      border:1px solid var(--border-color);
+      border-radius: 12px;
+      background: #18181e;
+      box-shadow: 0 2px 18px rgba(0,0,0,0.11);
       margin-bottom: 18px;
-      outline:none;
-      display:block;
+      outline: none;
+      border: 1px solid var(--border-color);
+      transition: box-shadow 0.2s;
     }
 
     footer{
@@ -79,8 +79,7 @@
 
     @media (max-width:420px){
       header{font-size:1rem;padding:14px 10px}
-      video{width:100%}
-      }
+      video{width:92%}
     }
   </style>
 </head>
@@ -101,7 +100,8 @@
 
   <div class="container">
       <video controls autoplay muted playsinline controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture>
-        <source src="https://cdn.videy.co/WVFzxkFR1.mp4" type="video/mp4" /></video>
+        <source src="https://cdn.videy.co/WVFzxkFR1.mp4">
+        </video>
 	</div>
 
   <footer>
